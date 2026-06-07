@@ -18,6 +18,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Installa SDK platform 33
+        run: sdkmanager "platforms;android-33" "build-tools;33.0.0"
+
       - name: Crea settings.gradle
         run: |
           cat > settings.gradle << 'EOF'

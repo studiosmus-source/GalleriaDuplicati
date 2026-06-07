@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D0D"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📸 Gestore Duplicati"
+        android:textColor="#E0E0E0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Premi Scansiona per analizzare DCIM/Camera"
+        android:textColor="#888888"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="🔍  SCANSIONA GALLERIA"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#1E88E5"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:progressTint="#1E88E5"
+            android:progressBackgroundTint="#2A2A2A"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingStart="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResultCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFB300"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I duplicati sono pre-selezionati. Deseleziona quelli da conservare."
+        android:textColor="#666666"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listViewDuplicates"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="multipleChoice"
+        android:divider="#1A1A1A"
+        android:dividerHeight="1dp"
+        android:background="#121212"
+        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:fastScrollEnabled="true" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🗑  ELIMINA SELEZIONATI"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#C62828"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+</LinearLayout>
